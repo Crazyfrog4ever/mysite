@@ -1,0 +1,45 @@
+{% extends 'shared/site.html' %}
+{% block body %}
+
+
+<section class="bg-texture">
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+
+            <div class="col" style="margin-top: 100px;">
+                <div class="rubberBand" style="background-color: #2C3E50; border-radius: 5px; padding: 20px; color: #fff;">
+                    <div>
+                        <h3 class="text-center">Login Form</h3>
+                        <hr style="border-color:#fff;"/>
+
+
+                        <form method ="POST">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input id='username' name='username' type="text" class="form-control" aria-describedby="emailhelp" placeholder="email">
+                                <small id ='emailhelp' class="form-text text-muted">We Will Never Share Your Username With Anyone Else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input name='password' type="password" class="'form-control" id="password" placeholder="Password">
+                            </div>
+                            <a class="login-link" href="#">Did You Forgot Your Password?</a>
+                            <br/>
+                            <br/>
+                            <button type="submit" class="btn btn-info btn-block">Submit please</button>
+                        </form>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="col"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
